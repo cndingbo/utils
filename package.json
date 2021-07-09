@@ -1,0 +1,63 @@
+{
+  "name": "@cndingbo/utils",
+  "version": "0.0.3",
+  "description": "Edenchatbot utils",
+  "private": false,
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "link": "npm link",
+    "size": "size-limit",
+    "analyze": "size-limit --why",
+    "docs": "typedoc --theme default --out docs ./src"
+  },
+  "peerDependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "module": "dist/utils.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/utils.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/utils.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^4.10.2",
+    "husky": "^6.0.0",
+    "size-limit": "^4.10.2",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.2.0",
+    "typedoc": "^0.20.36",
+    "typescript": "^4.2.4"
+  },
+  "bugs": {
+    "url": "https://github.com/cndingbo/utils/issues"
+  },
+  "homepage": "https://github.com/cndingbo/utils#readme"
+}
